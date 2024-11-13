@@ -24,9 +24,9 @@ docs = text_splitter.split_documents(data)
 # 3. 向量化
 from langchain_huggingface.embeddings import HuggingFaceEmbeddings
 model_id = "BAAI/bge-small-en-v1.5"
-embed = HuggingFaceEmbeddings(model_name=model_id)
+embedding = HuggingFaceEmbeddings(model_name=model_id)
 
-embedding = embed.embed_documents(docs[0].page_content)
+embed = embedding.embed_documents(docs[0].page_content)
 
 # print(f'{len(embedding[0])}: {embedding[0][:5]} ...')
 
