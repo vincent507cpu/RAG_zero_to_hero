@@ -46,7 +46,7 @@ retrieval = retriever.invoke(input=query)
 
 # 第三步：生成答案
 from langchain_ollama.llms import OllamaLLM
-llm = OllamaLLM(model="qwen2.5:1.5b")
+llm = OllamaLLM(model="qwen2.5:0.5b")
 
 context = '\n'.join([doc.page_content for doc in retrieval])
 
